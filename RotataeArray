@@ -1,0 +1,32 @@
+package Conceptss;
+import java.util.Scanner;
+public class RotatetheArray {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        System.out.print("Enter the number of positions to rotate: ");
+        int k = scanner.nextInt();
+        k = k % n; 
+        for (int i = 0; i < k; i++) {
+            int last = array[n - 1];
+            for (int j = n - 1; j > 0; j--) {
+                array[j] = array[j - 1];
+            }
+            array[0] = last;
+        }
+
+        System.out.println("Rotated array:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(array[i] + " ");
+        }
+        scanner.close();
+    }
+}
