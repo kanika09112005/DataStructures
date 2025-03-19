@@ -1,0 +1,71 @@
+package Conceptss;
+
+/*import java.util.Arrays;
+import java.util.Scanner;
+
+public class RearrangeArray {
+	public static void main(String args[]) {
+		 
+		 int[] a=new int[20];
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter the size of an array:");
+		 int size=sc.nextInt();
+		 System.out.println("enter the elements");
+		 for(int i=0;i<size;i++)
+		 {
+			a[i]=sc.nextInt();
+					
+		 }
+		 for(int i=0;i<size;i++)
+		 {
+			 System.out.println(a[i]);		
+		 }
+
+	for(int i=a[0];i<a[size-1];i++)
+	{
+		if(a[i]==0)
+		{
+			 a[i]=a[i+1];
+		}
+		size--;
+		 System.out.print(Arrays.toString(a));
+		
+		}
+		}*/
+	import java.util.Arrays;
+	import java.util.Scanner;
+
+	public class RearrangeArray{
+	    public static void main(String args[]) {
+	        int[] a = new int[20];
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter the size of an array:");
+	        int size = sc.nextInt();
+	        System.out.println("Enter the elements:");
+	        for (int i = 0; i < size; i++) {
+	            a[i] = sc.nextInt();
+	        }
+
+	        System.out.println("Array before shifting:");
+	        System.out.println(Arrays.toString(a));
+
+	        // Shift non-zero elements to the front
+	        int nonZeroIndex = 0; // Pointer for the position to place non-zero elements
+
+	        for (int i = 0; i < size; i++) {
+	            if (a[i] != 0) {
+	                a[nonZeroIndex] = a[i]; // Place non-zero element at the nonZeroIndex
+	                nonZeroIndex++; // Move the pointer forward
+	            }
+	        }
+
+	        // Fill the remaining positions with zeros
+	        for (int i = nonZeroIndex; i < size; i++) {
+	            a[i] = 0; // Set remaining positions to zero
+	        }
+
+	        System.out.println("Array after shifting:");
+	        System.out.println(Arrays.toString(a));
+	    }
+	}
+
