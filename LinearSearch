@@ -1,0 +1,54 @@
+package Conceptss;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class LinearSearch {
+	
+	
+	
+	 public static void Linear(int temp[],int f) {
+		 for(int i=0;i<temp.length;i++)
+		 {
+			 if(temp[i]==f)
+			 {
+				 System.out.println("Match foud at"+temp[i]);
+				 return;
+			 }
+			
+		 }
+		 System.out.println("Match not found");
+		
+      }
+	 public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        int[] array = new int[7];
+	        for (int i = 0; i <array.length; i++)
+	        {
+	        	System.out.println("Enter the element:");
+	            array[i] = scanner.nextInt();
+	        }
+	        System.out.println(Arrays.toString(array));
+	       
+	        System.out.println("Enter the value to find:");
+	        int find =scanner.nextInt();
+	        Linear(array,find);
+	        
+	 }
+}
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	       
+	        
+  
+
+         
