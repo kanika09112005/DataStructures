@@ -12,7 +12,7 @@ public class LinearSearch {
 		 {
 			 if(temp[i]==f)
 			 {
-				 System.out.println("Match foud at"+temp[i]);
+				 System.out.println("Match foud at"+temp i);
 				 return;
 			 }
 			
