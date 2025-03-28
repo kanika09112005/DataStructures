@@ -1,0 +1,47 @@
+package Conceptss;
+
+public class stack_impl {
+	int num[]=new int [6];
+	int top=-1;
+	public void push(int n)
+	{
+		if (top<num.length) {
+		++top;
+		num[top]=n;
+	}
+		else
+		{
+			System.out.println("StackOverflow");
+		}
+	}
+	public void peek()
+	{
+		System.out.println("Top value :"+num[top]);
+	}
+	public void pop()
+	{
+		if(top!=-1) 
+		{
+			System.out.println("popped out :"+num[top]);
+			top--;
+		}
+		else
+		{
+			System.out.println("StackUnderflow");
+		}
+		}
+public static void main(String[]args)
+	{
+		stack_impl s=new stack_impl();
+		s.push(45);
+		s.push(89);
+		s.push(22);
+		s.push(44);
+		s.push(11);
+		s.peek();
+		s.pop();
+		s.pop();
+		s.peek();
+	}
+	}
+
